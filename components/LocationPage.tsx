@@ -1,0 +1,38 @@
+import Image from "next/image";
+import Link from "next/link";
+import { QuoteForm } from "@/components/QuoteForm";
+import { services, site } from "@/lib/site";
+
+export function LocationPage({ city, intro, note }: { city: string; intro: string; note: string }) {
+  return (
+    <main>
+      <section className="locationHero">
+        <Image src="/images/1597.jpg" alt={`Natural State remodeling and construction serving ${city}`} fill priority sizes="100vw" />
+        <div className="locationScrim" />
+        <div className="shell locationHeroContent">
+          <span className="eyebrow light">Serving {city}</span>
+          <h1>Remodeling & construction around {city}.</h1>
+          <p>{intro}</p>
+          <Link href="/contact#quote" className="solidButton">Request an estimate</Link>
+        </div>
+      </section>
+
+      <section className="shell locationTrust">
+        <div className="locationNote"><strong>Local work. Straightforward communication.</strong><p>{note}</p></div>
+        <div className="licenseBlock"><span>Licensed</span><span>Bonded</span><span>Insured</span></div>
+      </section>
+
+      <section className="shell areaServices">
+        <div className="sectionIntro"><span>What we do</span><h2>Interior, exterior and outdoor projects.</h2></div>
+        <div className="areaServiceLinks">
+          {services.map((s) => <Link href={s.href} key={s.href}><span>{s.kicker}</span><strong>{s.title}</strong><em>View service →</em></Link>)}
+        </div>
+      </section>
+
+      <section className="quoteSection shell" id="quote">
+        <div className="quoteCopy"><span className="eyebrow">Project in {city}?</span><h2>Tell us what you need done.</h2><p>Send a few details about the job and a good number to reach you. You can also call us directly anytime you&apos;re ready to talk.</p><a className="phoneBig" href={site.phoneHref}>{site.phoneDisplay}</a></div>
+        <QuoteForm />
+      </section>
+    </main>
+  );
+}

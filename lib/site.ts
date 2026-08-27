@@ -1,0 +1,57 @@
+export const site = {
+  name: "Natural State Interior-Exterior Solutions LLC",
+  shortName: "Natural State",
+  phoneDisplay: "501-625-3925",
+  phoneHref: "tel:+15016253925",
+  address: "145 Nimbus St, Hot Springs, AR 71913",
+  city: "Hot Springs, Arkansas",
+  facebook: "https://www.facebook.com/profile.php?id=100064009724726",
+  google: "https://share.google/fCYe8TSJs4SdYyWOE",
+  areas: ["Hot Springs", "Lake Hamilton", "Malvern", "Surrounding communities"],
+  serviceTags: [
+    "Drywall",
+    "Insulation",
+    "Painting",
+    "Showers",
+    "Bathrooms",
+    "Flooring",
+    "Ceramic Tile",
+    "Spray Foam",
+    "Windows",
+    "Siding",
+    "Roofing",
+    "Gutters",
+    "Decks",
+  ],
+};
+
+export const services = [
+  {
+    title: "Interior Remodeling",
+    href: "/services/interior-remodeling",
+    image: "/images/1598.jpg",
+    kicker: "Inside the house",
+    description: "Flooring, drywall, painting, trim, room updates and the finish work that pulls a remodel together.",
+  },
+  {
+    title: "Bathrooms & Custom Tile",
+    href: "/services/bathroom-remodeling-custom-tile",
+    image: "/images/1616.jpg",
+    kicker: "Bathrooms & showers",
+    description: "Bathroom remodels, walk-in showers, ceramic tile and custom tile details built around the space.",
+  },
+  {
+    title: "Exterior Remodeling",
+    href: "/services/exterior-remodeling-siding",
+    image: "/images/1597.jpg",
+    kicker: "Outside the house",
+    description: "Siding, windows, exterior finish work, roofing, gutters and practical upgrades around the home.",
+  },
+  {
+    title: "Decks & Outdoor Construction",
+    href: "/services/decks-outdoor-construction",
+    image: "/images/1600.jpg",
+    kicker: "Built outdoors",
+    description: "Decks, ramps, porches, walkways and exterior carpentry for safer, more useful outdoor spaces.",
+  },
+] as const;

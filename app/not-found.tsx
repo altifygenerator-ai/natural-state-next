@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main className="shell" style={{padding:"110px 0"}}><span className="eyebrow">404</span><h1 style={{fontSize:"clamp(3.5rem,8vw,7rem)",textTransform:"uppercase",lineHeight:.9,margin:"10px 0 20px"}}>That page isn&apos;t here.</h1><p>Head back to the main site or tell us about the project you&apos;re working on.</p><div className="heroActions"><Link href="/" className="phoneButton">Back home</Link><Link href="/contact#quote" className="quietLink">Request an estimate →</Link></div></main>}
