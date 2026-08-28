@@ -1,8 +1,21 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { QuoteForm } from "@/components/QuoteForm";
 import { SectionIntro } from "@/components/SectionIntro";
 import { services, site } from "@/lib/site";
+
+export const metadata: Metadata = {
+  title: "Remodeling Contractor in Hot Springs, AR",
+  description:
+    "Natural State Interior-Exterior Solutions provides licensed, bonded and insured remodeling, custom tile, siding, decks and home improvements in Hot Springs and nearby Arkansas communities.",
+  alternates: { canonical: "/" },
+  openGraph: {
+    url: "/",
+    title: "Natural State Interior-Exterior Solutions | Hot Springs, AR",
+    description: "Interior and exterior remodeling, custom tile, siding, decks and home improvements around Hot Springs, Arkansas.",
+  },
+};
 
 export default function Home() {
   return (
@@ -17,14 +30,13 @@ export default function Home() {
           <div className="heroRule" />
           <p className="eyebrow">Natural State Interior-Exterior Solutions</p>
           <h1>Good work speaks for itself.</h1>
-          <p className="heroLead">Interior and exterior remodeling, custom tile, siding, decks and more for homeowners around Hot Springs, Lake Hamilton and Malvern.</p>
+          <p className="heroLead">Interior and exterior remodeling, custom tile, siding, decks and more for homeowners around Hot Springs and the surrounding area.</p>
           <div className="heroTrust"><span>Licensed</span><span>Bonded</span><span>Insured</span></div>
           <div className="heroActions">
-            <a href={site.phoneHref} className="phoneButton">Call {site.phoneDisplay}</a>
+            <a href={site.officePhoneHref} className="phoneButton">Call the office · {site.officePhoneDisplay}</a>
             <Link href="/gallery" className="quietLink">See our work →</Link>
           </div>
         </div>
-
       </section>
 
       <section className="trustStrip">
@@ -88,25 +100,39 @@ export default function Home() {
           <h2>Know who you&apos;re hiring.</h2>
           <p>Natural State is licensed, bonded and insured and based in Hot Springs. Look through our work, find us on Google or Facebook and then give us a call when you&apos;re ready to talk about the job.</p>
           <div className="proofLinks"><a href={site.google} target="_blank" rel="noreferrer">Find us on Google →</a><a href={site.facebook} target="_blank" rel="noreferrer">Visit us on Facebook →</a></div>
-          <div className="addressBlock"><span>Hot Springs</span><strong>{site.address}</strong><a href={site.phoneHref}>{site.phoneDisplay}</a></div>
+          <div className="addressBlock">
+            <span>Hot Springs</span>
+            <strong>{site.address}</strong>
+            <a href={site.officePhoneHref}>Office · {site.officePhoneDisplay}</a>
+            <a href={site.cellPhoneHref}>Cell · {site.cellPhoneDisplay}</a>
+          </div>
         </div>
       </section>
 
       <section className="areaSection">
         <div className="shell areaShell">
-          <div className="areaHeading"><span className="eyebrow light">Service area</span><h2>Based in Hot Springs. Working across the local area.</h2></div>
-          <div className="areaRoute">
+          <div className="areaHeading"><span className="eyebrow light">Service area</span><h2>Based in Hot Springs. Working across the local area.</h2><p>Not sure if you&apos;re in range? Give us a call and ask about your location.</p></div>
+          <div className="areaRoute areaRouteFive">
             <div className="routeLine" />
             <div className="areaStop main"><span>Based in</span><strong>Hot Springs</strong><em>Primary service area</em></div>
-            <Link href="/areas/lake-hamilton" className="areaStop"><span>Serving</span><strong>Lake Hamilton</strong><em>See area details →</em></Link>
-            <Link href="/areas/malvern" className="areaStop"><span>Serving</span><strong>Malvern</strong><em>See area details →</em></Link>
-            <div className="areaStop"><span>Also</span><strong>Nearby communities</strong><em>Call about your location</em></div>
+            <Link href="/areas/lake-hamilton" className="areaStop"><span>Serving</span><strong>Lake Hamilton</strong><em>Area details →</em></Link>
+            <Link href="/areas/malvern" className="areaStop"><span>Serving</span><strong>Malvern</strong><em>Area details →</em></Link>
+            <Link href="/areas/hot-springs-village" className="areaStop"><span>Serving</span><strong>Hot Springs Village</strong><em>Area details →</em></Link>
+            <Link href="/areas/benton" className="areaStop"><span>Serving</span><strong>Benton</strong><em>Area details →</em></Link>
           </div>
         </div>
       </section>
 
       <section className="quoteSection shell" id="quote">
-        <div className="quoteCopy"><span className="eyebrow">Ready to talk about it?</span><h2>Tell us what you need done.</h2><p>Send a few details about the job, where it is and the best way to reach you. We&apos;ll take it from there.</p><a className="phoneBig" href={site.phoneHref}>{site.phoneDisplay}</a></div>
+        <div className="quoteCopy">
+          <span className="eyebrow">Ready to talk about it?</span>
+          <h2>Tell us what you need done.</h2>
+          <p>Send a few details about the job, where it is and the best way to reach you. We&apos;ll take it from there.</p>
+          <div className="phoneStack">
+            <a className="phoneBig" href={site.officePhoneHref}><span>Office</span>{site.officePhoneDisplay}</a>
+            <a className="phoneBig secondaryPhone" href={site.cellPhoneHref}><span>Cell</span>{site.cellPhoneDisplay}</a>
+          </div>
+        </div>
         <QuoteForm />
       </section>
     </main>

@@ -1,35 +1,71 @@
 # Natural State Interior-Exterior Solutions
 
-Next.js App Router site for Natural State Interior-Exterior Solutions LLC in Hot Springs, Arkansas.
+Launch-ready Next.js App Router site for Natural State Interior-Exterior Solutions LLC in Hot Springs, Arkansas.
 
 ## Included pages
 
 - Home / Hot Springs landing page
-- Project gallery
+- Project Gallery
 - Interior Remodeling
 - Bathroom Remodeling & Custom Tile
 - Exterior Remodeling & Siding
 - Decks & Outdoor Construction
 - Lake Hamilton service-area page
 - Malvern service-area page
+- Hot Springs Village service-area page
+- Benton service-area page
 - Contact / estimate request
 
-## Brand assets
+## Business details in the build
 
-The two logo marks in `public/brand/` were cleaned from the supplied business signage so the header and footer use the marks themselves rather than a photograph of the sign.
+- Office: 501-625-3925
+- Cell: 501-318-9082
+- Address: 145 Nimbus St, Hot Springs, AR 71913
+- Main domain: https://www.naturalstateexteriors.net
+- Quote email destination: jonmunz@gmail.com
+- Resend sending domain: hometownwebservices.cc
 
-## Estimate form
+## Quote form
 
-The form posts to `/api/quote` and sends with Resend when these environment values are present:
+The estimate form posts to `/api/quote` and includes:
+
+- Server-side validation
+- Hidden honeypot spam field
+- Cloudflare Turnstile verification
+- Resend email delivery
+- Customer-safe error messages with both phone numbers as fallback
+
+Set these production environment variables in Vercel:
 
 ```env
 RESEND_API_KEY=
-QUOTE_TO_EMAIL=
-QUOTE_FROM_EMAIL=
-NEXT_PUBLIC_SITE_URL=
+QUOTE_TO_EMAIL=jonmunz@gmail.com
+QUOTE_FROM_EMAIL=Natural State Website <website@hometownwebservices.cc>
+NEXT_PUBLIC_TURNSTILE_SITE_KEY=
+TURNSTILE_SECRET_KEY=
+NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION=
+NEXT_PUBLIC_SITE_URL=https://www.naturalstateexteriors.net
 ```
 
-Until delivery is configured, the form returns a customer-facing message directing visitors to call the business rather than exposing setup details.
+For Cloudflare Turnstile, create a widget for `naturalstateexteriors.net` and `www.naturalstateexteriors.net`, then add the site key and secret above.
+
+## SEO / Search Console
+
+The site includes:
+
+- Unique title and description metadata for the home, service, gallery, location and contact pages
+- Canonical URLs based on `https://www.naturalstateexteriors.net`
+- Open Graph / social metadata
+- `robots.txt`
+- XML sitemap at `/sitemap.xml`
+- Local `HomeAndConstructionBusiness` JSON-LD with address, both phone numbers, service areas and services
+- Large image preview directives for Google
+- Google Search Console verification support through `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+- Web app manifest and site icons
+
+After the production domain is attached, add the Search Console verification token to the environment variable above, redeploy, verify the property, and submit:
+
+`https://www.naturalstateexteriors.net/sitemap.xml`
 
 ## Run locally
 
@@ -38,6 +74,11 @@ npm install
 npm run dev
 ```
 
-## Production check
+## Before public launch
 
-Before launch, confirm the final domain, destination email, Google Business Profile URL, and any business details that should be added such as a contractor license number or verified customer reviews.
+1. Add the Resend API key.
+2. Add the Cloudflare Turnstile site key and secret.
+3. Add the Google Search Console verification token when available.
+4. Confirm `www.naturalstateexteriors.net` is the preferred production domain in Vercel and redirect the bare domain to it.
+5. Test one estimate submission and confirm delivery to `jonmunz@gmail.com`.
+6. Add any additional project photos as they are supplied.

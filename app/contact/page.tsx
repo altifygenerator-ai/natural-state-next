@@ -3,7 +3,12 @@ import Image from "next/image";
 import { QuoteForm } from "@/components/QuoteForm";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = { title: "Contact & Estimates", description: "Request an estimate from Natural State Interior-Exterior Solutions in Hot Springs, Arkansas." };
+export const metadata: Metadata = {
+  title: "Contact & Estimates",
+  description: "Request an estimate from Natural State Interior-Exterior Solutions in Hot Springs, Arkansas. Call the office or cell, or send project details online.",
+  alternates: { canonical: "/contact" },
+  openGraph: { url: "/contact", title: "Contact Natural State Interior-Exterior Solutions" },
+};
 
 export default function ContactPage() {
   return (
@@ -14,7 +19,12 @@ export default function ContactPage() {
           <span className="eyebrow">Contact Natural State</span>
           <h1>Tell us what you&apos;re working on.</h1>
           <p>Call us or send a few details about the job. Whether it&apos;s one room, a bathroom, siding, a deck or a project that touches several parts of the house, we can talk through what you need.</p>
-          <div className="contactFacts"><a href={site.phoneHref}>{site.phoneDisplay}</a><span>{site.address}</span><strong>Licensed · Bonded · Insured</strong></div>
+          <div className="contactFacts">
+            <div className="contactPhone"><span>Office</span><a href={site.officePhoneHref}>{site.officePhoneDisplay}</a></div>
+            <div className="contactPhone"><span>Cell</span><a href={site.cellPhoneHref}>{site.cellPhoneDisplay}</a></div>
+            <span>{site.address}</span>
+            <strong>Licensed · Bonded · Insured</strong>
+          </div>
         </div>
       </section>
 

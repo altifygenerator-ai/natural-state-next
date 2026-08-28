@@ -43,7 +43,7 @@ export function ServicePage({
         <div className="serviceNarrative">
           <h2>{detailTitle}</h2>
           <p>{detailCopy}</p>
-          <p>Serving homeowners throughout Hot Springs, Lake Hamilton, Malvern and nearby communities.</p>
+          <p>Serving homeowners throughout Hot Springs, Lake Hamilton, Malvern, Hot Springs Village, Benton and nearby communities.</p>
         </div>
       </section>
 
@@ -62,7 +62,10 @@ export function ServicePage({
           <span className="eyebrow">Have a job like this?</span>
           <h2>Tell us what you&apos;re looking at.</h2>
           <p>Send a few details about the project and the best way to reach you. We&apos;ll follow up from there.</p>
-          <a className="phoneBig" href={site.phoneHref}>{site.phoneDisplay}</a>
+          <div className="phoneStack">
+            <a className="phoneBig" href={site.officePhoneHref}><span>Office</span>{site.officePhoneDisplay}</a>
+            <a className="phoneBig secondaryPhone" href={site.cellPhoneHref}><span>Cell</span>{site.cellPhoneDisplay}</a>
+          </div>
         </div>
         <QuoteForm />
       </section>

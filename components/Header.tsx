@@ -9,7 +9,7 @@ export function Header() {
         <div className="shell utilityInner">
           <span>Licensed · Bonded · Insured</span>
           <span className="utilityArea">Serving Hot Springs & nearby communities</span>
-          <a href={site.phoneHref}>{site.phoneDisplay}</a>
+          <a href={site.officePhoneHref}>Office {site.officePhoneDisplay}</a>
         </div>
       </div>
 
@@ -32,6 +32,8 @@ export function Header() {
             <div className="navDrop">
               <Link href="/areas/lake-hamilton">Lake Hamilton</Link>
               <Link href="/areas/malvern">Malvern</Link>
+              <Link href="/areas/hot-springs-village">Hot Springs Village</Link>
+              <Link href="/areas/benton">Benton</Link>
             </div>
           </div>
           <Link href="/contact">Contact</Link>
@@ -44,7 +46,7 @@ export function Header() {
         <Link href="/gallery">Work</Link>
         <Link href="/#services">Services</Link>
         <Link href="/contact#quote">Estimate</Link>
-        <a href={site.phoneHref}>Call</a>
+        <a href={site.officePhoneHref}>Call</a>
       </div>
     </header>
   );
