@@ -19,7 +19,7 @@ Launch-ready Next.js App Router site for Natural State Interior-Exterior Solutio
 ## Business details in the build
 
 - Office: 501-625-3925
-- Cell: 501-318-9082
+- Cell: 501-318-4082
 - Address: 145 Nimbus St, Hot Springs, AR 71913
 - Main domain: https://www.naturalstateexteriors.net
 - Quote email destination: jonmunz@gmail.com

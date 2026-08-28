@@ -9,10 +9,10 @@ export function JsonLd() {
     url: site.url,
     logo: `${site.url}/brand/natural-state-logo.png`,
     image: `${site.url}/images/1597.jpg`,
-    telephone: ["+1-501-625-3925", "+1-501-318-9082"],
+    telephone: ["+1-501-625-3925", "+1-501-318-4082"],
     contactPoint: [
       { "@type": "ContactPoint", contactType: "office", telephone: "+1-501-625-3925" },
-      { "@type": "ContactPoint", contactType: "mobile", telephone: "+1-501-318-9082" },
+      { "@type": "ContactPoint", contactType: "mobile", telephone: "+1-501-318-4082" },
     ],
     address: {
       "@type": "PostalAddress",
