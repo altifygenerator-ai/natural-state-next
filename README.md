@@ -82,3 +82,7 @@ npm run dev
 4. Confirm `www.naturalstateexteriors.net` is the preferred production domain in Vercel and redirect the bare domain to it.
 5. Test one estimate submission and confirm delivery to `jonmunz@gmail.com`.
 6. Add any additional project photos as they are supplied.
+
+## Vercel Web Analytics
+
+Vercel Web Analytics is already wired into the root layout with `@vercel/analytics`. After deploying, enable Web Analytics for the project in the Vercel dashboard if it is not already enabled. No additional environment variable is required.
