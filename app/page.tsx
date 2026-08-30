@@ -6,14 +6,14 @@ import { SectionIntro } from "@/components/SectionIntro";
 import { services, site } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Remodeling Contractor in Hot Springs, AR",
+  title: "General Contractor & Remodeling in Hot Springs, AR",
   description:
-    "Natural State Interior-Exterior Solutions provides licensed, bonded and insured remodeling, custom tile, siding, decks and home improvements in Hot Springs and nearby Arkansas communities.",
+    "Natural State Interior-Exterior Solutions is a licensed, bonded and insured general contractor serving Hot Springs with remodeling, roofing, siding, custom tile, decks, drywall, painting and construction services.",
   alternates: { canonical: "/" },
   openGraph: {
     url: "/",
     title: "Natural State Interior-Exterior Solutions | Hot Springs, AR",
-    description: "Interior and exterior remodeling, custom tile, siding, decks and home improvements around Hot Springs, Arkansas.",
+    description: "General contracting, interior and exterior remodeling, custom tile, siding, decks, drywall, painting and construction around Hot Springs, Arkansas.",
   },
 };
 
@@ -30,7 +30,7 @@ export default function Home() {
           <div className="heroRule" />
           <p className="eyebrow">Natural State Interior-Exterior Solutions</p>
           <h1>Good work speaks for itself.</h1>
-          <p className="heroLead">Interior and exterior remodeling, custom tile, siding, decks and more for homeowners around Hot Springs and the surrounding area.</p>
+          <p className="heroLead">General contracting, interior and exterior remodeling, custom tile, siding, decks and more for homeowners around Hot Springs and the surrounding area.</p>
           <div className="heroTrust"><span>Licensed</span><span>Bonded</span><span>Insured</span></div>
           <div className="heroActions">
             <a href={site.officePhoneHref} className="phoneButton">Call the office · {site.officePhoneDisplay}</a>
@@ -39,10 +39,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="trustStrip">
-        <div className="shell trustStripInner">
-          <div className="trustStatement"><span>Know who is working on your home.</span><strong>Licensed · Bonded · Insured</strong></div>
-          <p>Natural State is based in Hot Springs and handles a wide range of residential remodeling and construction. Take a look through the work, check the business profiles and call when you&apos;re ready to talk about your project.</p>
+      <section className="experienceStrip" id="about">
+        <div className="shell experienceGrid">
+          <div className="experienceLead">
+            <span className="eyebrow">Built on experience</span>
+            <h2>Over 30 years in construction and home improvement.</h2>
+            <div className="experienceTrust"><span>Licensed</span><span>Bonded</span><span>Insured</span></div>
+          </div>
+          <div className="experienceCopy">
+            <p>Natural State Interior &amp; Exterior Solutions brings more than 30 years of hands-on experience to projects around Hot Springs. We handle roofing and siding, interior and exterior painting, custom tile for kitchens and bathrooms, flooring, drywall repairs and patches, larger remodels and new construction.</p>
+            <p>We got our start in drywall and finishing, including spray texture, and that attention to the finish still carries through the work today. Expect clear communication, a clean job site and a straightforward, no-pressure estimate before the work begins.</p>
+          </div>
         </div>
       </section>
 
@@ -74,7 +81,7 @@ export default function Home() {
           <div className="serviceHeading">
             <span className="eyebrow light">What we do</span>
             <h2>From the inside out, we handle the work your home needs.</h2>
-            <p>Some jobs are one trade. Others touch several parts of the house. Natural State handles a broad range of residential remodeling and construction so the work can come together without turning into a runaround.</p>
+            <p>Some jobs are one trade. Others touch several parts of the house. As a general contractor, Natural State handles a broad range of remodeling and construction work so the project can come together without turning into a runaround.</p>
           </div>
           <div className="serviceStack">
             {services.map((service) => (
@@ -98,7 +105,7 @@ export default function Home() {
         <div className="reputationCopy">
           <span className="eyebrow">A name you can check</span>
           <h2>Know who you&apos;re hiring.</h2>
-          <p>Natural State is licensed, bonded and insured and based in Hot Springs. Look through our work, find us on Google or Facebook and then give us a call when you&apos;re ready to talk about the job.</p>
+          <p>Natural State is a licensed, bonded and insured general contractor based in Hot Springs with more than 30 years of construction and home improvement experience. Look through our work, find us on Google or Facebook and give us a call when you&apos;re ready to talk about the job.</p>
           <div className="proofLinks"><a href={site.google} target="_blank" rel="noreferrer">Find us on Google →</a><a href={site.facebook} target="_blank" rel="noreferrer">Visit us on Facebook →</a></div>
           <div className="addressBlock">
             <span>Hot Springs</span>

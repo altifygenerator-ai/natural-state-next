@@ -9,17 +9,15 @@ export function BrandLockup({ footer = false }: { footer?: boolean }) {
       className={footer ? "brandLockup brandLockupFooter" : "brandLockup"}
       aria-label={`${site.name} home`}
     >
-      <span className="brandMark" aria-hidden="true">
+      <span className="brandMark">
         <Image
           src="/brand/natural-state-logo.png"
-          alt=""
-          width={920}
-          height={514}
+          alt={`${site.name} logo`}
+          width={1302}
+          height={735}
           priority={!footer}
         />
       </span>
-      <span className="brandLocation">Hot Springs, Arkansas</span>
-      <span className="srOnly">{site.name}</span>
     </Link>
   );
 }

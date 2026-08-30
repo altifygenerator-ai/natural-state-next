@@ -21,7 +21,7 @@ export function LocationPage({
         <div className="locationScrim" />
         <div className="shell locationHeroContent">
           <span className="eyebrow light">Serving {city}</span>
-          <h1>Remodeling & construction around {city}.</h1>
+          <h1>General contracting & remodeling around {city}.</h1>
           <p>{intro}</p>
           <Link href="/contact#quote" className="solidButton">Request an estimate</Link>
         </div>

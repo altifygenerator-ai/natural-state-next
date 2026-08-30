@@ -3,9 +3,10 @@ import { services, site } from "@/lib/site";
 export function JsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": "HomeAndConstructionBusiness",
+    "@type": ["HomeAndConstructionBusiness", "GeneralContractor"],
     "@id": `${site.url}/#business`,
     name: site.name,
+    description: "Licensed, bonded and insured general contractor with over 30 years of construction and home improvement experience serving Hot Springs and nearby communities.",
     url: site.url,
     logo: `${site.url}/brand/natural-state-logo.png`,
     image: `${site.url}/images/1597.jpg`,

@@ -11,11 +11,11 @@ const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: "Remodeling Contractor in Hot Springs, AR | Natural State",
+    default: "General Contractor & Remodeling in Hot Springs, AR | Natural State",
     template: "%s | Natural State Interior-Exterior Solutions",
   },
   description:
-    "Licensed, bonded and insured interior and exterior remodeling in Hot Springs, Arkansas, including bathrooms, custom tile, siding, decks, flooring and home improvements.",
+    "Licensed, bonded and insured general contractor in Hot Springs, Arkansas with over 30 years of experience in remodeling, roofing, siding, bathrooms, custom tile, decks, drywall, painting and construction.",
   applicationName: site.name,
   creator: site.name,
   publisher: site.name,
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: site.name,
-    description: "Licensed, bonded and insured remodeling and construction services around Hot Springs, Arkansas.",
+    description: "Licensed, bonded and insured general contractor with over 30 years of experience serving Hot Springs and nearby Arkansas communities.",
     type: "website",
     locale: "en_US",
     siteName: site.name,
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: site.name,
-    description: "Interior and exterior remodeling, custom tile, siding, decks and home improvements around Hot Springs, Arkansas.",
+    description: "General contracting, interior and exterior remodeling, custom tile, siding, decks, drywall, painting and construction around Hot Springs, Arkansas.",
     images: ["/images/1597.jpg"],
   },
   verification: googleVerification ? { google: googleVerification } : undefined,

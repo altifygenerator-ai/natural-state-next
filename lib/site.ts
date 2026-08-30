@@ -14,6 +14,8 @@ export const site = {
   areas: ["Hot Springs", "Lake Hamilton", "Malvern", "Hot Springs Village", "Benton", "Nearby communities"],
   serviceTags: [
     "Drywall",
+    "Drywall Finishing",
+    "Spray Texture",
     "Insulation",
     "Painting",
     "Showers",
@@ -26,6 +28,7 @@ export const site = {
     "Roofing",
     "Gutters",
     "Decks",
+    "New Construction",
   ],
 };
 
@@ -35,7 +38,7 @@ export const services = [
     href: "/services/interior-remodeling",
     image: "/images/1598.jpg",
     kicker: "Inside the house",
-    description: "Flooring, drywall, painting, trim, room updates and the finish work that pulls a remodel together.",
+    description: "Flooring, drywall repairs and finishing, painting, trim, room updates and the finish work that pulls a remodel together.",
   },
   {
     title: "Bathrooms & Custom Tile",
