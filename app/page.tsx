@@ -5,6 +5,39 @@ import { QuoteForm } from "@/components/QuoteForm";
 import { SectionIntro } from "@/components/SectionIntro";
 import { services, site } from "@/lib/site";
 
+const recentProjectPhotos = [
+  {
+    src: "/images/recent-work/interior-remodel-flooring-lighting.webp",
+    alt: "Interior renovation with new flooring and recessed lighting",
+    label: "Interior renovation",
+  },
+  {
+    src: "/images/recent-work/kitchen-cabinets-countertops.webp",
+    alt: "Kitchen cabinet and countertop work",
+    label: "Kitchen work",
+  },
+  {
+    src: "/images/recent-work/exterior-addition-finished-siding.webp",
+    alt: "Exterior addition with new siding and windows",
+    label: "Exterior improvements",
+  },
+  {
+    src: "/images/recent-work/finished-wood-stairs.webp",
+    alt: "Finished wood stair treads with white risers",
+    label: "Finish carpentry",
+  },
+  {
+    src: "/images/recent-work/interior-framing-layout.webp",
+    alt: "Interior framing and layout changes during a renovation",
+    label: "Framing & layout",
+  },
+  {
+    src: "/images/recent-work/floor-framing-rebuild.webp",
+    alt: "Floor framing rebuild during a renovation",
+    label: "Structural repair",
+  },
+] as const;
+
 export const metadata: Metadata = {
   title: "General Contractor & Remodeling in Hot Springs, AR",
   description:
@@ -73,6 +106,25 @@ export default function Home() {
             <div className="workCaption"><span>Interior remodeling</span><strong>Kitchen & finish details</strong></div>
           </Link>
         </div>
+
+        <div className="homeProjectProof">
+          <div className="homeProjectProofCopy">
+            <span className="eyebrow">More recent work</span>
+            <h2>The finished room matters. So does what happens behind it.</h2>
+            <p>We keep real project photos on the site because the work should be easy to judge for yourself. Some show the finished result. Others show the framing, repair and rebuild work that makes the finish possible.</p>
+          </div>
+          <div className="homeProjectProofGrid">
+            {recentProjectPhotos.map((project, index) => (
+              <figure className={`homeProjectProofPhoto homeProjectProofPhoto${index + 1}`} key={project.src}>
+                <div>
+                  <Image src={project.src} alt={project.alt} fill sizes="(max-width: 760px) 100vw, 33vw" />
+                </div>
+                <figcaption>{project.label}</figcaption>
+              </figure>
+            ))}
+          </div>
+        </div>
+
         <div className="sectionLink"><Link href="/gallery">See more of our work →</Link></div>
       </section>
 
@@ -121,7 +173,7 @@ export default function Home() {
           <div className="areaHeading"><span className="eyebrow light">Service area</span><h2>Based in Hot Springs. Working across the local area.</h2><p>Not sure if you&apos;re in range? Give us a call and ask about your location.</p></div>
           <div className="areaRoute areaRouteFive">
             <div className="routeLine" />
-            <div className="areaStop main"><span>Based in</span><strong>Hot Springs</strong><em>Primary service area</em></div>
+            <Link href="/areas/hot-springs" className="areaStop main"><span>Based in</span><strong>Hot Springs</strong><em>Area details →</em></Link>
             <Link href="/areas/lake-hamilton" className="areaStop"><span>Serving</span><strong>Lake Hamilton</strong><em>Area details →</em></Link>
             <Link href="/areas/malvern" className="areaStop"><span>Serving</span><strong>Malvern</strong><em>Area details →</em></Link>
             <Link href="/areas/hot-springs-village" className="areaStop"><span>Serving</span><strong>Hot Springs Village</strong><em>Area details →</em></Link>

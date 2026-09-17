@@ -30,6 +30,7 @@ export function Header() {
           <div className="navGroup">
             <span>Service Area</span>
             <div className="navDrop">
+              <Link href="/areas/hot-springs">Hot Springs</Link>
               <Link href="/areas/lake-hamilton">Lake Hamilton</Link>
               <Link href="/areas/malvern">Malvern</Link>
               <Link href="/areas/hot-springs-village">Hot Springs Village</Link>

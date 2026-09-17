@@ -14,6 +14,7 @@ export function Footer() {
         <div className="footerLinks">
           <Link href="/gallery">Our Work</Link>
           <Link href="/#services">Services</Link>
+          <Link href="/areas/hot-springs">Hot Springs</Link>
           <Link href="/areas/lake-hamilton">Lake Hamilton</Link>
           <Link href="/areas/malvern">Malvern</Link>
           <Link href="/areas/hot-springs-village">Hot Springs Village</Link>
